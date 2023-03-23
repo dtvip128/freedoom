@@ -1,10 +1,13 @@
+# frozen_string_literal: true
+
+# This controller is for user login and logout
 class SessionsController < ApplicationController
   before_action :load_user, only: :create
 
   def create
     return create_user unless @user
 
-    if @user && @user.authenticate(params[:password])
+    if @user&.authenticate(params[:password])
       session[:user_id] = @user.id
       redirect_to root_path
     else
