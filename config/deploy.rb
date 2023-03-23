@@ -5,6 +5,7 @@ set :application, "freedoom"
 set :repo_url, "git@github.com:dtvip128/freedoom.git"
 set :ssh_options, { :forward_agent => true }
 
+set :deploy_to, '/home/deploy/freedoom'
 set :pty, true
 set :linked_files, %w(config/database.yml config/application.yml)
 set :linked_dirs, %w(log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads)
