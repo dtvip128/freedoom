@@ -68,9 +68,9 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.1)
       public_suffix (>= 2.0.2, < 6.0)
-    ast (2.4.2)
     airbrussh (1.4.1)
       sshkit (>= 1.6.1, != 1.7.0)
+    ast (2.4.2)
     bcrypt (3.1.18)
     bindex (0.8.1)
     bootsnap (1.16.0)
@@ -143,6 +143,8 @@ GEM
     mini_portile2 (2.8.1)
     minitest (5.18.0)
     msgpack (1.6.1)
+    net-http (0.3.2)
+      uri
     net-imap (0.3.4)
       date
       net-protocol
@@ -252,6 +254,7 @@ GEM
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.4.2)
+    uri (0.10.0)
     web-console (4.2.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -286,6 +289,9 @@ DEPENDENCIES
   debug
   importmap-rails
   jbuilder
+  net-http
+  net-imap
+  net-smtp
   pg (~> 1.1)
   pry
   pry-rails
@@ -299,6 +305,7 @@ DEPENDENCIES
   stimulus-rails
   turbo-rails
   tzinfo-data
+  uri (= 0.10.0)
   web-console
   webdrivers
 

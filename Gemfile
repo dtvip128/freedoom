@@ -50,6 +50,10 @@ gem "bootsnap", require: false
 
 gem "slim"
 gem "rubocop"
+gem "net-http"
+gem "net-smtp"
+gem "net-imap"
+gem "uri", "0.10.0"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
