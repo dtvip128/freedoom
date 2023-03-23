@@ -8,9 +8,12 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <%= stylesheet_link_tag "https://www.w3schools.com/w3css/4/w3.css" %>
+
   </head>
 
   <body>
+    <%= render partial: "layouts/header" %>
     <%= yield %>
   </body>
 </html>

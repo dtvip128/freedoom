@@ -12,6 +12,11 @@ class SessionsController < ApplicationController
     end
   end
 
+  def destroy
+    log_out
+    redirect_to root_path
+  end
+
   private
 
   def load_user
@@ -31,5 +36,10 @@ class SessionsController < ApplicationController
 
   def user_params
     params.permit(:username, :password)
+  end
+
+  def log_out
+    session.delete(:user_id)
+    @current_user = nil
   end
 end
