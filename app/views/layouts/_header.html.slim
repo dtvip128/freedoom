@@ -1,7 +1,7 @@
 .w3-container.w3-teal
   h1 style="float:left;" Funny videos
   span style="float:right;"
-    - if logged_in?
+    - if current_user
       h2
         | Hi,
         = current_user&.username
