@@ -1,0 +1,16 @@
+.w3-container.w3-teal
+  h1 style="float:left;" Funny videos
+  span style="float:right;"
+    - if logged_in?
+      h2
+        | Hi,
+        = current_user&.username
+      = button_to
+        = link_to "Logout", logout_path
+    - else
+      = form_tag '/login' do
+        |  Username: 
+        = text_field_tag :username
+        |  Password: 
+        = password_field_tag :password
+        = submit_tag "Login"
