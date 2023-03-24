@@ -5,6 +5,8 @@
       h2
         | Hi,
         = current_user&.username
+        = button_to
+          = link_to "Share a video", new_video_path
       = button_to
         = link_to "Logout", logout_path
     - else
