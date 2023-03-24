@@ -336,6 +336,7 @@ DEPENDENCIES
   figaro
   importmap-rails
   jbuilder
+  minitest-rails
   minitest-rails-capybara
   net-http
   net-imap
