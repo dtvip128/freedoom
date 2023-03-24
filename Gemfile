@@ -73,13 +73,10 @@ group :development do
 
   gem "pry"
   gem "pry-rails"
-
-  gem "capistrano"
-  gem "capistrano3-puma"
-  gem "capistrano-rails", require: false
-  gem "capistrano-bundler", require: false
-  gem "capistrano-rvm"
-  gem "capistrano-yarn"
+  gem "capistrano", "~> 3.11"
+  gem "capistrano-rails", "~> 1.4"
+  gem "capistrano-passenger", "~> 0.2.0"
+  gem "capistrano-rbenv", "~> 2.1", ">= 2.1.4"
 end
 
 group :test do
@@ -87,4 +84,8 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+end
+
+group :production do
+  gem "rails_12factor"
 end
