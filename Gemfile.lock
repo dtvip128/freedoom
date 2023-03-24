@@ -154,6 +154,12 @@ GEM
     mini_mime (1.1.2)
     mini_portile2 (2.8.1)
     minitest (5.18.0)
+    minitest-rails (7.0.0)
+      minitest (~> 5.10)
+      railties (~> 7.0.0)
+    minitest-rails-capybara (0.0.2)
+      capybara
+      minitest-rails
     msgpack (1.6.1)
     net-http (0.3.2)
       uri
@@ -330,6 +336,7 @@ DEPENDENCIES
   figaro
   importmap-rails
   jbuilder
+  minitest-rails-capybara
   net-http
   net-imap
   net-smtp
