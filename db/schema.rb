@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_23_034302) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_24_082606) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -21,4 +21,27 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_23_034302) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "videos", force: :cascade do |t|
+    t.string "title"
+    t.string "url"
+    t.text "description"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "author"
+    t.date "date_summit"
+    t.index ["user_id"], name: "index_videos_on_user_id"
+  end
+
+  create_table "youtube_sessions", force: :cascade do |t|
+    t.string "session_token"
+    t.json "credentials"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_youtube_sessions_on_user_id"
+  end
+
+  add_foreign_key "videos", "users"
+  add_foreign_key "youtube_sessions", "users"
 end

@@ -1,0 +1,9 @@
+- @videos.each do |video|
+  .w3-content
+    .w3-row.w3-margin
+      .w3-third
+        iframe[src=(video.url.gsub('watch?v=', 'embed/')) style="width:100%;min-height:200px"]
+      .w3-twothird.w3-container
+        h2 #{video.title}
+        p Share by: #{video.user.username}
+        p Description: #{video.description}

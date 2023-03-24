@@ -55,6 +55,7 @@ gem "net-smtp"
 gem "net-imap"
 gem "uri", "0.10.0"
 gem "figaro"
+gem "video_info"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -84,8 +85,4 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
-end
-
-group :production do
-  gem "rails_12factor"
 end

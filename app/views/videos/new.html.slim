@@ -1,0 +1,14 @@
+.card style=("width: 40rem;margin: auto") 
+  .card-header.text-center
+    h5 Share a Youtube movie
+  .card-body
+    = form_for @video do |f|
+      .form-group.row
+        .col-sm-2
+          = f.label :url, class: 'col-form-label'
+        .col-sm-10
+          = f.text_field :url, class: 'form-control', required: true
+      .form-group.row
+        .col-sm-2
+        .col-sm-10
+          = f.submit 'Submit', class: 'btn btn-primary btn-lg btn-block'
