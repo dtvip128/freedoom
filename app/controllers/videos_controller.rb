@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# This controller is for share a video
 class VideosController < ApplicationController
   def new
     @video = Video.new
