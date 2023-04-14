@@ -1,3 +1,3 @@
 # README
 
-Demo: http://ec2-100-25-142-147.compute-1.amazonaws.com/
+Demo: http://ec2-54-175-128-133.compute-1.amazonaws.com/
